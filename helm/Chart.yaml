@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ai-creative-backend
+description: AI Creative backend service
+version: 0.1.0
+appVersion: "0.1.0"
+type: application
