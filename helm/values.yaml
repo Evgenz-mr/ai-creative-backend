@@ -1,0 +1,31 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/evgenz-mr/ai-creative-backend
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  port: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  host: ai-creative.local
+  path: /api
+
+config:
+  corsOrigins: "http://ai-creative.local"
+
+secret:
+  postgresUrl: ""
+  postgresUser: ""
+  postgresPassword: ""
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 192Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
